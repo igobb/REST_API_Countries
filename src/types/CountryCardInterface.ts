@@ -1,4 +1,4 @@
-export interface Country {
+export interface CountryCard {
     name: string,
     population: number,
     region: string,

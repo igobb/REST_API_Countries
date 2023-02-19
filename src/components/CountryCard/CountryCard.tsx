@@ -1,8 +1,8 @@
 import * as C from './CountryCardStyles'
-import { Country } from "../../types/Country";
+import { CountryCard } from "../../types/CountryCardInterface";
 import { Link } from "react-router-dom";
 
-const CountryCard = ({ name, population, region, capital, flag }: Country) => {
+const CountryCard = ({ name, population, region, capital, flag }: CountryCard) => {
   return (
     <C.CountryCard>
       <Link to={`/country/${name}`}>

@@ -3,7 +3,7 @@ import * as C from "./CountriesStyles";
 
 import Input from "../../components/Input/Input";
 import { api } from "../../apiConfig/apiConfig";
-import { Countries } from "../../types/Countries";
+import { Countries } from "../../types/CountriesInterface";
 import CountryCard from "../../components/CountryCard/CountryCard";
 
 const CountriesPage = () => {
