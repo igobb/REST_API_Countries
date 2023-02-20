@@ -4,7 +4,7 @@ export const InputArea = styled.section`
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 2rem 0;
+    padding: 3rem 0;
 
     input {
         height: 50px;

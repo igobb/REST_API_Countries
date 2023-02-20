@@ -16,6 +16,7 @@ export interface SingleCountry {
         }
     }
     languages: Array<string>,
+    borders: Array<string>
     flag: string
 
 }

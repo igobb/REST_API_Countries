@@ -9,8 +9,9 @@ import CountryCard from "../../components/CountryCard/CountryCard";
 const CountriesPage = () => {
   //co lepsze - null czy pusta tablica?
   const [countriesData, setCountriesData] = useState<Array<Countries>>([]);
-  const [loading, setLoadig] = useState(true);
-  const [error, setError] = useState(null);
+  const [loading, setLoadig] = useState<boolean>(true);
+  // const [error, setError] = useState(null);
+  const [searchedCountry, setSearchedCountry] = useState<string>('')
 
   useEffect(() => {
     getCountries();
@@ -22,17 +23,20 @@ const CountriesPage = () => {
     setLoadig(false);
   };
 
-  console.log(countriesData);
+  const filteredCountries = countriesData.filter(country => country.name.official.toLowerCase().includes(searchedCountry.toLowerCase()) || country.region.toLowerCase().includes(searchedCountry.toLowerCase()))
 
+  console.log(countriesData);
+  console.log(searchedCountry);
+  // country.name.official.includes(searchedCountry)
   return (
     <C.CountriesArea>
-      <Input />
+      <Input setSearchedCountry={setSearchedCountry} value={searchedCountry}/>
       {loading ? (
         <div className="loading-screen">Loading...</div>
       ) : (
         <div className="container__countries">
           {countriesData &&
-            countriesData.map((country: Countries, index : number) => {
+            filteredCountries.map((country: Countries, index : number) => {
               return (
                 <CountryCard
                   key={index}

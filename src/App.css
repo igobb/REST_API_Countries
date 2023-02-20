@@ -1,5 +1,7 @@
 .App {
     padding: 0 5rem;
+    margin: auto;
     width: 100vw;
+    max-width: 1440px;
     height: calc(100vh - 90px);
 }

@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const CountriesArea = styled.main`
-    min-height: calc(100vh) - 90px;
+    font-size: 14px;
+    padding-bottom: 1rem;
     
     .container__countries {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         gap: 30px;
     }
 `
