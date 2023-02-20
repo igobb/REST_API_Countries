@@ -1,8 +1,14 @@
-import * as C from './CountryCardStyles'
+import * as C from "./CountryCardStyles";
 import { CountryCard } from "../../types/CountryCardInterface";
 import { Link } from "react-router-dom";
 
-const CountryCard = ({ name, population, region, capital, flag }: CountryCard) => {
+const CountryCard = ({
+  name,
+  population,
+  region,
+  capital,
+  flag,
+}: CountryCard) => {
   return (
     <C.CountryCard>
       <Link to={`/country/${name}`}>
@@ -13,7 +19,9 @@ const CountryCard = ({ name, population, region, capital, flag }: CountryCard) =
           <h1 className="country--name">{name}</h1>
           <p>
             <span>Population: </span>
-            {population}
+            {population
+              .toString()
+              .replace(/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g, "$1,")}
           </p>
           <p>
             <span>Region: </span>

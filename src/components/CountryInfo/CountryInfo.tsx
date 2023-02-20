@@ -53,7 +53,11 @@ const CountryInfo = ({
 
               <p>
                 <span className="info-bold">Population:</span>{" "}
-                {population ? population : "No data"}
+                {population
+                  ? population
+                      .toString()
+                      .replace(/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g, "$1,")
+                  : "No data"}
               </p>
               <p>
                 <span className="info-bold">Region:</span>{" "}
@@ -117,7 +121,11 @@ const CountryInfo = ({
             {borders ? (
               borders.map((borderingCountry, index) => {
                 return (
-                  <Link to={`/code/${borderingCountry}`} key={index} className="data__borders--country-container">
+                  <Link
+                    to={`/code/${borderingCountry}`}
+                    key={index}
+                    className="data__borders--country-container"
+                  >
                     <p>{borderingCountry}</p>
                   </Link>
                 );
