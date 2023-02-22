@@ -6,10 +6,19 @@ export const CountryCard = styled.div`
   background-color: var(--white);
   border-radius: 10px;
   box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  background-color: ${(props) =>
+    props.theme === `light` ? "" : `var(--darkBlue)`};
+
+  
+
+  @media screen and (max-width: 1024px) {
+    width: 260px;
+    height: 360px;
+  }
 
   a {
     text-decoration: none;
-    color: #000
+    color: ${(props) => (props.theme === `light` ? `var(--veryDarkBlue)` : `var(--white)`)};
   }
 
   .country__img {
