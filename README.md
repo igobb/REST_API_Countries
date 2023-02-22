@@ -24,10 +24,9 @@ This is my solution for REST Countries API with color theme switcher challenge o
 * API
 
 ## Setup
+To run this project <a href="https://igobb.github.io/REST_API_Countries/">CLICK THIS LINK</a>
 
-LINK SOON
-
-To run this project follow these steps:
+or follow these steps:
 
 1. Clone the repository to your local machine.
 2. Open the 'rest_countries' directory as a project in your IDE.
