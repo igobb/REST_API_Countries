@@ -4,7 +4,7 @@ import OneCountryPage from '../pages/OneCountryPage/OneCountryPage'
 
 const MainRoutes = () => {
     return useRoutes([
-        {path:'/', element: <CountriesPage/>},
+        {path:'/REST_API_Countries', element: <CountriesPage/>},
         {path:'/country/:name', element: <OneCountryPage/>},
         {path:'/code/:code', element: <OneCountryPage/>},
     ])
