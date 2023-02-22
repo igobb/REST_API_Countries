@@ -18,6 +18,7 @@ This is my solution for REST Countries API with color theme switcher challenge o
 * React Icons
 * React Spinners
 * React Router Dom
+* React environment variables
 * Vite
 * Styled Components
 * Axios
