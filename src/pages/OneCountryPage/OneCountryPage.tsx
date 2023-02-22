@@ -49,7 +49,7 @@ const OneCountryPage = () => {
   return (
     <C.OneCountryPage theme={state.theme}>
       <div className="one-country__container">
-        <Link className="country-page__link" to="/">
+        <Link className="country-page__link" to="/REST_API_Countries">
           <BsArrowLeft className="country-page__link-arrow" />
           Back
         </Link>
